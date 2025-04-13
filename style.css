@@ -1,9 +1,11 @@
 html, body, div, input, button{
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 html, body{
     padding: 0;
+    background-color: #555;
     margin: 0;
 }
 
@@ -21,11 +23,12 @@ html, body{
     min-width: 380px;
     width: 100%;
     height: 80vh;
-    background: linear-gradient(125deg, #3ef, #3fb);
+    background: linear-gradient(125deg, rgb(51, 255, 228), rgb(0, 130, 139));
     border-radius: 50px;
     padding: 50px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 20px 4px #a5e2d9;
 }
 
 .search{
@@ -59,14 +62,90 @@ input, button{
     margin-right: 16px;
     border: 0;
     font-size: 18px;
+    padding: 0 25px;
 }
 
 .app-body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+
 }
-/* .search-button:hover{
+.search-button:hover{
     background: #739893;
-    color: #ddd;
-} */
+}
+
+.clima-desc{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.grado-clima, .ciudad-clima{
+    margin: 0;
+    padding: 0;
+}
+
+.humedad-clima, .viento-clima{
+    font-size: 28px;
+}
+.txt-clima, .grado-clima, .ciudad-clima, .humedad-clima, .viento-clima, span{
+    color: #fff;
+}
+
+.txt-clima{
+    font-size: 18px;
+}
+.grado-clima{
+    font-size: 60px;
+}
+.ciudad-clima{
+    font-size: 40px;
+}
+.clima-info{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.content-clima-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.content-clima-info img{
+    width: 70px;
+    height: 70px;
+}
+.content-clima-info p{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.hour-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hour-section img{
+    width: 60px;
+}
+.hour-section p{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+}
+.marca-agua{
+    color: #fff;
+    font-size: 14px;
+    opacity: 0.5;
+
+}

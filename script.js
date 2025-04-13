@@ -12,5 +12,16 @@ async function obtenerClima(){
     const apiClimaActual = `http://api.weatherapi.com/v1/current.json?q=${ciudad}&lang=${idioma}&key=${claveApi}`;
     const response = await fetch(apiClimaActual)
     const data = await response.json(response)
-    console.log(data)
+    mostrarClima(data)
+}
+
+function mostrarClima (data){
+    inpCiudad.value = ""
+    document.querySelector(".img-clima").src = data.current.condition.icon;
+    document.querySelector(".txt-clima").innerHTML = data.current.condition.text;
+    document.querySelector(".grado-clima").innerHTML = data.current.temp_c + '°C';
+    document.querySelector(".ciudad-clima").innerHTML = data.location.name;
+    document.querySelector(".humedad-clima").innerHTML = data.current.humidity + '%';
+    document.querySelector(".viento-clima").innerHTML = data.current.wind_kph + ' km/h';
+    document.querySelector(".hour-app").innerHTML = data.location.localtime;
 }

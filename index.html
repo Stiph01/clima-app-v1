@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <consthtml lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>clima app</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="interface">
-        <div class="interface-content">
-            <div class="search">
-                <input type="text" class="search-input">
-                <button class="search-button"></button>
-            </div>
-            <div class="app-body">
-                <label for="">Parcialmente nublado</label>
-                <label for="">6°C</label>
-                <label for="">Huancayo</label>
-                <label for="">85% Humendad</label>
-                <label for="">4.3 km/h viento</label>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>clima app</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="interface">
+            <div class="interface-content">
+                <div class="search">
+                    <input type="text" class="search-input"
+                        placeholder="Ingresa una ciudad" autocomplete="false"
+                        spellcheck="false" id="input-ciudad">
+                    <button class="search-button" onclick="obtenerClima()"></button>
+                </div>
+                <div class="app-body">
+                    <p class="txt-clima">Parcialmente nublado</p>
+                    <img src="./img/clima-ejemplo.webp" alt="" class="img-clima">
+                    <div class="clima-desc">
+                        <h2 class="grado-clima">20C°</h2>
+                        <h3 class="ciudad-clima">Huancayo</h3>
+                    </div>
+                    <div class="clima-info">
+                        <div class="content-clima-info">
+                            <img src="./img/viento.png" alt="">
+                            <P>
+                                <span class="humedad-clima">50%</span><span>Humedad</span>
+                            </P>
+                        </div>
+                        <div class="content-clima-info">
+                            <img src="./img/humedad.png" alt="">
+                            <P>
+                                <span class="viento-clima">15km/h</span><span>Viento</span>
+                            </P>
+                        </div>
+                    </div>
+                    <div class="hour-section">
+                        <img src="./img/hour.png" alt="">
+                        <p><span class="hour-app">--/--/-- --:--</span><span>hora</span></p>
+                    </div>
+                </div>
+                <P class="marca-agua">ANTONIO JUSTO STIPH</P>
             </div>
         </div>
-    </div>
-    <script src="/script.js"></script>
-</body>
+        <script src="/script.js"></script>
+    </body>
 </consthtml>
